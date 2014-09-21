@@ -25,13 +25,11 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 	@Override
 	protected void initializeGraphicalViewer() {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void doSave(IProgressMonitor monitor) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
