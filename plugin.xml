@@ -19,5 +19,15 @@
             id="FirstGEFPro.perspective">
       </perspective>
    </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="firstgefpro.editor.GraphicalEditor"
+            contributorClass="firstgefpro.editor.GraphicalEditorActionBarContributor"
+            default="false"
+            id="firstGEFPro.graphicalEditor"
+            name="GraphicalEditor">
+      </editor>
+   </extension>
 
 </plugin>
