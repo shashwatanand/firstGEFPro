@@ -1,16 +1,25 @@
 package firstgefpro.editor;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.gef.DefaultEditDomain;
+import org.eclipse.gef.palette.PaletteRoot;
+import org.eclipse.gef.ui.parts.GraphicalEditorWithPalette;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.PartInitException;
-import org.eclipse.ui.part.EditorPart;
 
-public class GraphicalEditor extends EditorPart {
+/**
+ * GraphicalEditor.java
+ * @author Shashwat Anand
+ * @version $Id: $
+ * @since Sept 21, 2014
+ */
+public class GraphicalEditor extends GraphicalEditorWithPalette {
+	public static final String ID = "firstGEFPro.graphicalEditor";
 
 	public GraphicalEditor() {
-		// TODO Auto-generated constructor stub
+		setEditDomain(new DefaultEditDomain(this));
 	}
 
 	@Override
@@ -54,6 +63,18 @@ public class GraphicalEditor extends EditorPart {
 	public void setFocus() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	protected PaletteRoot getPaletteRoot() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected void initializeGraphicalViewer() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
