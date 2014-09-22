@@ -3,6 +3,7 @@ package firstgefpro.editor;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.gef.ContextMenuProvider;
 import org.eclipse.gef.DefaultEditDomain;
+import org.eclipse.gef.EditPart;
 import org.eclipse.gef.GraphicalViewer;
 import org.eclipse.gef.dnd.TemplateTransferDragSourceListener;
 import org.eclipse.gef.palette.PaletteRoot;
@@ -28,9 +29,17 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 	
 	@Override
 	protected void initializeGraphicalViewer() {
-		// TODO Auto-generated method stub
+		GraphicalViewer viewer = getGraphicalViewer();
+		viewer.setContents(createEntreprise());
+		viewer.addDropTargetListener(new MyTemplateTransferDropTargetListener(
+				viewer));
 	}
 
+
+	private EditPart createEntreprise() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
 	protected void configureGraphicalViewer() {
