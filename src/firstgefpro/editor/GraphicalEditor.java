@@ -31,10 +31,6 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 		// TODO Auto-generated method stub
 	}
 
-	@Override
-	public void doSave(IProgressMonitor monitor) {
-		// TODO Auto-generated method stub
-	}
 
 	@Override
 	protected void configureGraphicalViewer() {
@@ -58,6 +54,9 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 		getPaletteViewer().addDragSourceListener(new TemplateTransferDragSourceListener(getPaletteViewer()));
 	}
 
-
+	@Override
+	public void doSave(IProgressMonitor monitor) {
+		// Nothing
+	}
 
 }
