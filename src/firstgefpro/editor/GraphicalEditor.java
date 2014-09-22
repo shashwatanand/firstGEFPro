@@ -25,8 +25,7 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 	public GraphicalEditor() {
 		setEditDomain(new DefaultEditDomain(this));
 	}
-
-
+	
 	@Override
 	protected void initializeGraphicalViewer() {
 		// TODO Auto-generated method stub
@@ -58,4 +57,7 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 		super.initializePaletteViewer();
 		getPaletteViewer().addDragSourceListener(new TemplateTransferDragSourceListener(getPaletteViewer()));
 	}
+
+
+
 }
