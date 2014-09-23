@@ -6,9 +6,21 @@ import org.eclipse.gef.DefaultEditDomain;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.GraphicalViewer;
 import org.eclipse.gef.dnd.TemplateTransferDragSourceListener;
+import org.eclipse.gef.palette.CombinedTemplateCreationEntry;
+import org.eclipse.gef.palette.MarqueeToolEntry;
+import org.eclipse.gef.palette.PaletteGroup;
 import org.eclipse.gef.palette.PaletteRoot;
+import org.eclipse.gef.palette.PaletteSeparator;
+import org.eclipse.gef.palette.SelectionToolEntry;
 import org.eclipse.gef.ui.parts.GraphicalEditorWithPalette;
 
+
+
+
+
+import firstgefpro.command.NodeCreationFactory;
+import firstgefpro.model.Employee;
+import firstgefpro.model.Service;
 import firstgefpro.part.AppEditPartFactory;
 
 /**
@@ -53,8 +65,21 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 	
 	@Override
 	protected PaletteRoot getPaletteRoot() {
-		// TODO Auto-generated method stub
-		return null;
+	    PaletteRoot root = new PaletteRoot();
+	    PaletteGroup manipGroup = new PaletteGroup("Manipulation of object");
+	    root.add(manipGroup);
+	    SelectionToolEntry selectionToolEntry = new SelectionToolEntry();
+	    manipGroup.add(selectionToolEntry);
+	    manipGroup.add(new MarqueeToolEntry());
+	    root.setDefaultEntry(selectionToolEntry);
+
+	    PaletteSeparator sep2 = new PaletteSeparator();
+	    root.add(sep2);
+	    PaletteGroup instGroup = new PaletteGroup("Creation of elements");
+	    root.add(instGroup);
+	    instGroup.add(new CombinedTemplateCreationEntry("Service", "Creation of service model", new NodeCreationFactory(Service.class), null, null));
+	    instGroup.add(new CombinedTemplateCreationEntry("Employe", "Creation of employee model", new NodeCreationFactory(Employee.class), null, null));
+	    return root;
 	}
 	
 	@Override
