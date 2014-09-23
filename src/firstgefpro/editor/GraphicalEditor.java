@@ -78,7 +78,7 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 	    PaletteGroup instGroup = new PaletteGroup("Creation of elements");
 	    root.add(instGroup);
 	    instGroup.add(new CombinedTemplateCreationEntry("Service", "Creation of service model", new NodeCreationFactory(Service.class), null, null));
-	    instGroup.add(new CombinedTemplateCreationEntry("Employe", "Creation of employee model", new NodeCreationFactory(Employee.class), null, null));
+	    instGroup.add(new CombinedTemplateCreationEntry("Employee", "Creation of employee model", new NodeCreationFactory(Employee.class), null, null));
 	    return root;
 	}
 	
