@@ -2,6 +2,9 @@ package firstgefpro.command;
 
 import org.eclipse.gef.requests.CreationFactory;
 
+import firstgefpro.model.Employee;
+import firstgefpro.model.Service;
+
 /**
  * NodeCreationFactory.java
  * @author Shashwat Anand
@@ -18,8 +21,19 @@ public class NodeCreationFactory implements CreationFactory {
 
 	@Override
 	public Object getNewObject() {
-		// TODO Auto-generated method stub
-		return null;
+		if (template == null) return null;
+	    if (template == Service.class) {
+	      Service srv = new Service();
+	      srv.setEtage(42);
+	      srv.setName("Factory");
+	      return srv;
+	    } else if (template == Employee.class) {
+	      Employee emp = new Employee();
+	      emp.setName("Halle");
+	      emp.setLastName("Berry");
+	      return emp;
+	    }
+	    return null;
 	}
 
 	@Override
