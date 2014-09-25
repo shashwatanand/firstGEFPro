@@ -18,5 +18,4 @@ public class Service extends Node {
 	public int getEtAge() {
 		return etAge;
 	}
-
 }
