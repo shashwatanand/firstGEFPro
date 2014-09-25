@@ -1,5 +1,11 @@
 package firstgefpro.model;
 
+/**
+ * Node.java
+ * @author Shashwat Anand
+ * @version $Id: $
+ * @since Sept 25, 2014
+ */
 public class Node {
 	private String name;
 
