@@ -6,7 +6,6 @@ import firstgefpro.model.Node;
 
 /**
  * AbstractEditPart.java
- * 
  * @author Shashwat Anand
  * @version $Id: $
  * @since Sept 27, 2014
