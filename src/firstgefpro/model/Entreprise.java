@@ -8,6 +8,16 @@ package firstgefpro.model;
  */
 public class Entreprise extends Node {
 	private String address;
+	
+	private int capital;
+
+	public int getCapital() {
+		return capital;
+	}
+
+	public void setCapital(int capital) {
+		this.capital = capital;
+	}
 
 	public String getAddress() {
 		return address;
