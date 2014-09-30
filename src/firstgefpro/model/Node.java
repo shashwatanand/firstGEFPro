@@ -2,6 +2,9 @@ package firstgefpro.model;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.util.List;
+
+import org.eclipse.draw2d.geometry.Rectangle;
 
 /**
  * Node.java
@@ -11,6 +14,10 @@ import java.beans.PropertyChangeSupport;
  */
 public class Node {
 	private PropertyChangeSupport listeners;
+	
+	private Rectangle layout;
+
+	private List<Node> children;
 
 	private String name;
 
