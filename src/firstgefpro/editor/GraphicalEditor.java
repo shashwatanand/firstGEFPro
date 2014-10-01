@@ -4,7 +4,6 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gef.ContextMenuProvider;
 import org.eclipse.gef.DefaultEditDomain;
-import org.eclipse.gef.EditPart;
 import org.eclipse.gef.GraphicalViewer;
 import org.eclipse.gef.dnd.TemplateTransferDragSourceListener;
 import org.eclipse.gef.palette.CombinedTemplateCreationEntry;
@@ -46,7 +45,7 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 	}
 
 
-	private EditPart createEntreprise() {
+	private Entreprise createEntreprise() {
 	    Entreprise psyEntreprise = new Entreprise();
 	    psyEntreprise.setName("Psykokwak Entreprise");
 	    psyEntreprise.setAddress("Quelque part sur terre");
@@ -58,17 +57,17 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 	    comptaService.setLayout(new Rectangle(30, 50, 250, 150));
 	    Employee employeCat = new Employee();
 	    employeCat.setName("Debroua");
-	    employeCat.setPrenom("Cat");
+	    employeCat.setLastName("Cat");
 	    employeCat.setLayout(new Rectangle(25, 40, 60, 40));
 	    comptaService.addChild(employeCat);
 	    Employee employeJyce = new Employee();
 	    employeJyce.setName("Psykokwak");
-	    employeJyce.setPrenom("Jyce");
+	    employeJyce.setLastName("Jyce");
 	    employeJyce.setLayout(new Rectangle(100, 60, 60, 40));
 	    comptaService.addChild(employeJyce);
 	    Employee employeEva = new Employee();
 	    employeEva.setName("Longoria");
-	    employeEva.setPrenom("Eva");
+	    employeEva.setLastName("Eva");
 	    employeEva.setLayout(new Rectangle(180, 90, 60, 40));
 	    comptaService.addChild(employeEva);
 	    psyEntreprise.addChild(comptaService);
@@ -78,12 +77,12 @@ public class GraphicalEditor extends GraphicalEditorWithPalette {
 	    rhService.setLayout(new Rectangle(220, 230, 250, 150));
 	    Employee employePaul = new Employee();
 	    employePaul.setName("Dupond");
-	    employePaul.setPrenom("Paul");
+	    employePaul.setLastName("Paul");
 	    employePaul.setLayout(new Rectangle(40, 70, 60, 40));
 	    rhService.addChild(employePaul);
 	    Employee employeEric = new Employee();
 	    employeEric.setName("Durand");
-	    employeEric.setPrenom("Eric");
+	    employeEric.setLastName("Eric");
 	    employeEric.setLayout(new Rectangle(170, 100, 60, 40));
 	    rhService.addChild(employeEric);
 	    psyEntreprise.addChild(rhService);
